@@ -18,41 +18,41 @@ $gray: #d3d3d3;
 }
 
 body {
+  height: 100vh;
   font-family: "Roboto", sans-serif;
   color: $white;
 }
 
 // utility
 .bold {
-  text-transform: uppercase;
   font-weight: 500;
+  text-transform: uppercase;
 }
 
 // content
-
 nav {
-  display: flex;
   align-items: flex-end;
   justify-content: space-between;
+  display: flex;
   border-bottom: $secondary 3px solid;
-  height: 20vh;
   width: 100vw;
+  height: 20vh;
   padding: 2rem 1.5rem;
   background: $primary-dark;
   menu {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    display: flex;
     min-width: 10%;
     li {
       margin-right: 2rem;
+      font-size: 1.3rem;
       list-style: none;
       text-transform: uppercase;
-      font-size: 1.3rem;
     }
     a {
-      outline: none;
       text-decoration: none;
+      outline: none;
       color: $gray;
       &:hover {
         color: $white;
@@ -64,8 +64,8 @@ nav {
         color: $white;
       }
       i {
-        color: $secondary-dark;
         padding-right: 0.3rem;
+        color: $secondary-dark;
         &:active {
           color: $secondary;
         }
@@ -80,9 +80,9 @@ nav {
   }
   h1 {
     font-size: 3.5rem;
-    color: $primary-light;
     -webkit-text-stroke: 0.5px $white;
     text-shadow: 0 0 5px $secondary-dark;
+    color: $primary-light;
     span {
       font-size: 2.5rem;
     }
@@ -90,38 +90,38 @@ nav {
 }
 
 main {
+  flex-flow: column nowrap;
+  display: flex;
   height: 100%;
   padding: 0.5rem 4rem 0 2.5rem;
   background-color: $primary-light;
-  display: flex;
-  flex-flow: column nowrap;
 
   h2 {
-    padding: 1rem 0;
     margin-bottom: 1rem;
+    padding: 1rem 0;
     font-size: 2.6rem;
   }
   section {
-    display: flex;
     flex-flow: wrap;
+    display: flex;
     width: 100%;
   }
 }
 
 article {
-  display: flex;
   flex-direction: column;
+  display: flex;
   margin-bottom: 2rem;
   margin-right: 5rem;
-  height: auto;
-  width: 20rem;
-  background: $primary;
   box-shadow: 4px 4px 15px 5px $primary-dark,
     -1px -1px 15px 5px $primary-light;
+  width: 20rem;
+  height: auto;
+  background: $primary;
   .card-top {
-    display: flex;
-    flex-direction: column;
     position: relative;
+    flex-direction: column;
+    display: flex;
     height: 10rem;
     img {
       position: absolute;
@@ -130,51 +130,51 @@ article {
       height: 20rem;
     }
     .overlay {
-      display: flex;
-      justify-content: space-between;
-      padding: 1rem;
       position: absolute;
-      height: 100%;
-      width: 100%;
-      background: rgba($black, 0.6);
       z-index: 2;
+      justify-content: space-between;
+      display: flex;
       transition: 1s;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      background: rgba($black, 0.6);
       &:hover {
-        background: rgba($black, 0);
         transition: 1s;
+        background: rgba($black, 0);
 
         i {
-          cursor: pointer;
-          background: rgba($black, 0.6);
           transition: 1s;
+          background: rgba($black, 0.6);
+          cursor: pointer;
         }
         .rating-container {
-          transition: 1s;
           opacity: 0;
+          transition: 1s;
         }
       }
       i {
         margin-top: 0.5rem;
-        color: $secondary-light;
-        background: rgba($white, 0.3);
-        padding: 0.5rem;
-        height: 4rem;
         border-radius: 100%;
+        height: 4rem;
+        padding: 0.5rem;
+        background: rgba($white, 0.3);
         font-size: 3rem;
+        color: $secondary-light;
         &:hover {
           transition: 0.5s;
-          color: $white;
-          background: rgba($secondary-dark, 0.6);
           text-shadow: 0 0 3px $secondary-dark;
+          background: rgba($secondary-dark, 0.6);
+          color: $white;
         }
       }
-      .rating-container {
-        color: $secondary-light;
-        display: flex;
+      .rank-container {
         align-content: center;
         flex-direction: column;
+        display: flex;
+        line-height: 2.5rem;
         text-align: center;
-        line-height: 2rem;
+        color: $secondary-light;
         p:first-child {
           font-size: 1.3rem;
           text-transform: uppercase;
@@ -186,22 +186,22 @@ article {
     }
   }
   .card-bottom {
-    display: flex;
+    align-self: flex-end;
     z-index: 2;
     flex-direction: column;
-    align-self: flex-end;
+    display: flex;
     border-top: 1px solid $primary-dark;
-    min-height: 20rem;
     width: 100%;
+    min-height: 20rem;
     padding: 1rem;
     background: $primary;
     line-height: 1.5rem;
     text-transform: capitalize;
 
     h3 {
-      color: $secondary;
       font-size: 1.7rem;
       font-weight: 700;
+      color: $secondary;
     }
     h4 {
       padding-bottom: 1rem;
@@ -209,35 +209,33 @@ article {
     }
     .link-container {
       display: flex;
-      font-size: 0.3rem;
-      font-weight: 700;
-      background: rgba($gray, 0.5);
+      margin-bottom: 1rem;
       height: 5rem;
       padding: 0.4rem;
-      margin-bottom: 1rem;
+      background: rgba($gray, 0.5);
+      font-size: 0.3rem;
+      font-weight: 700;
       word-break: break-word;
       p:first-child {
         color: darken($gray, 60%);
-        text-transform: lowercase;
         font-size: 1rem;
+        text-transform: lowercase;
       }
     }
     .seller-container,
     .lot-container {
       margin-top: 0.5rem;
       p:first-child {
-        color: $secondary-light;
         font-size: 1rem;
         text-transform: uppercase;
+        color: $secondary-light;
       }
       h5 {
         font-size: 1.4rem;
-        font-weight: 700;
         line-height: 1.8rem;
+        font-weight: 700;
         color: $white;
       }
     }
   }
 }
-
-// utility
