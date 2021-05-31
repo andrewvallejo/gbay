@@ -1,8 +1,9 @@
 # gbay
 
-This project was to copy a mock website that has a lot of contrast elements to gear us students towards being more intuned with the accessability attributes in front end web developement. This project had been cleared by google WAVES.
+## Static Comp Challenge
 
-## Technologies
+This project was to create a website that has a lot of contrasting elements and accessability attributes. We had to copy a mockup website. This project was designed to gear us students to being more intuned with the accessability attributes in front end web developement. This project had been cleared by google WAVES.
+
 
 - CSS
 - HTML
@@ -36,3 +37,4 @@ Everything on this site passes WAVE
 #### Contributers
 
 Andrew Vallejo
+
