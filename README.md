@@ -26,6 +26,8 @@ Everything on this site passes WAVE
 
 - Too much margin on the right side of the cards.
 
+- When the webpage is shrinked to its smallest, the background doesn't extend over. 
+
 ### Preview
 
 <img src="./assets/demo.png" alt="A picture of the website">
