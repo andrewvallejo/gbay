@@ -11,6 +11,11 @@ body {
   color: #fff;
 }
 
+.bold {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -25,7 +30,7 @@ nav {
   height: 20vh;
   width: 100vw;
   padding: 2rem 1.5rem;
-  background: #1b5e20;
+  background: #003300;
 }
 
 nav menu {
@@ -86,6 +91,9 @@ nav menu .current i {
 
 nav h1 {
   font-size: 3.5rem;
+  color: #4c8c4a;
+  -webkit-text-stroke: 0.5px #fff;
+  text-shadow: 0 0 5px #c9bc1f;
 }
 
 nav h1 span {
@@ -93,16 +101,16 @@ nav h1 span {
 }
 
 main {
-  height: 100vh;
+  height: 100%;
   padding: 0.5rem 4rem 0 2.5rem;
-  background-color: #1b5e20;
+  background-color: #4c8c4a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
 }
 
 main h2 {
@@ -115,6 +123,8 @@ main section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
   width: 100%;
 }
 
@@ -126,16 +136,16 @@ article {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 15rem;
+  margin-bottom: 2rem;
   margin-right: 5rem;
   height: auto;
-  min-width: 20rem;
+  width: 20rem;
   background: #1b5e20;
   -webkit-box-shadow: 4px 4px 15px 5px #003300, -1px -1px 15px 5px #4c8c4a;
           box-shadow: 4px 4px 15px 5px #003300, -1px -1px 15px 5px #4c8c4a;
 }
 
-article .top {
+article .card-top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,7 +157,7 @@ article .top {
   height: 10rem;
 }
 
-article .top img {
+article .card-top img {
   position: absolute;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -155,7 +165,7 @@ article .top img {
   height: 20rem;
 }
 
-article .top .overlay {
+article .card-top .overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,25 +182,26 @@ article .top .overlay {
   transition: 1s;
 }
 
-article .top .overlay:hover {
+article .card-top .overlay:hover {
   background: rgba(0, 0, 0, 0);
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-article .top .overlay:hover i {
+article .card-top .overlay:hover i {
+  cursor: pointer;
   background: rgba(0, 0, 0, 0.6);
   -webkit-transition: 1s;
   transition: 1s;
 }
 
-article .top .overlay:hover .rating-container {
+article .card-top .overlay:hover .rating-container {
   -webkit-transition: 1s;
   transition: 1s;
   opacity: 0;
 }
 
-article .top .overlay i {
+article .card-top .overlay i {
   margin-top: 0.5rem;
   color: #ffff8b;
   background: rgba(255, 255, 255, 0.3);
@@ -200,7 +211,7 @@ article .top .overlay i {
   font-size: 3rem;
 }
 
-article .top .overlay i:hover {
+article .card-top .overlay i:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   color: #fff;
@@ -208,7 +219,7 @@ article .top .overlay i:hover {
   text-shadow: 0 0 3px #c9bc1f;
 }
 
-article .top .overlay .rating-container {
+article .card-top .overlay .rating-container {
   color: #ffff8b;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,15 +234,16 @@ article .top .overlay .rating-container {
   line-height: 2rem;
 }
 
-article .top .overlay .rating-container p:first-child {
+article .card-top .overlay .rating-container p:first-child {
   font-size: 1.3rem;
+  text-transform: uppercase;
 }
 
-article .top .overlay .rating-container p:nth-child(2) {
+article .card-top .overlay .rating-container h3 {
   font-size: 3rem;
 }
 
-article .bottom {
+article .card-bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -242,21 +254,62 @@ article .bottom {
           flex-direction: column;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  border-top: 1px solid #003300;
   min-height: 20rem;
   width: 100%;
   padding: 1rem;
-  background: #4c8c4a;
+  background: #1b5e20;
+  line-height: 1.5rem;
+  text-transform: capitalize;
 }
 
-article .bottom .link-container {
+article .card-bottom h3 {
+  color: #ffee58;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+article .card-bottom h4 {
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+article .card-bottom .link-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: #000;
+  font-size: 0.3rem;
   font-weight: 700;
   background: rgba(211, 211, 211, 0.5);
   height: 5rem;
   padding: 0.4rem;
+  margin-bottom: 1rem;
   word-break: break-word;
+}
+
+article .card-bottom .link-container p:first-child {
+  color: #3a3a3a;
+  text-transform: lowercase;
+  font-size: 1rem;
+}
+
+article .card-bottom .seller-container,
+article .card-bottom .lot-container {
+  margin-top: 0.5rem;
+}
+
+article .card-bottom .seller-container p:first-child,
+article .card-bottom .lot-container p:first-child {
+  color: #ffff8b;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+article .card-bottom .seller-container h5,
+article .card-bottom .lot-container h5 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  color: #fff;
 }
 /*# sourceMappingURL=styles.css.map */

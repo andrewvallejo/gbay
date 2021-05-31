@@ -22,6 +22,14 @@ body {
   color: $white;
 }
 
+// utility
+.bold {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+// content
+
 nav {
   display: flex;
   align-items: flex-end;
@@ -30,7 +38,7 @@ nav {
   height: 20vh;
   width: 100vw;
   padding: 2rem 1.5rem;
-  background: $primary;
+  background: $primary-dark;
   menu {
     display: flex;
     flex-direction: row;
@@ -72,6 +80,9 @@ nav {
   }
   h1 {
     font-size: 3.5rem;
+    color: $primary-light;
+    -webkit-text-stroke: 0.5px $white;
+    text-shadow: 0 0 5px $secondary-dark;
     span {
       font-size: 2.5rem;
     }
@@ -79,11 +90,11 @@ nav {
 }
 
 main {
-  height: 100vh;
+  height: 100%;
   padding: 0.5rem 4rem 0 2.5rem;
-  background-color: $primary;
+  background-color: $primary-light;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
 
   h2 {
     padding: 1rem 0;
@@ -92,6 +103,7 @@ main {
   }
   section {
     display: flex;
+    flex-flow: wrap;
     width: 100%;
   }
 }
@@ -99,14 +111,14 @@ main {
 article {
   display: flex;
   flex-direction: column;
-  margin-bottom: 15rem;
+  margin-bottom: 2rem;
   margin-right: 5rem;
   height: auto;
-  min-width: 20rem;
+  width: 20rem;
   background: $primary;
   box-shadow: 4px 4px 15px 5px $primary-dark,
     -1px -1px 15px 5px $primary-light;
-  .top {
+  .card-top {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -132,6 +144,7 @@ article {
         transition: 1s;
 
         i {
+          cursor: pointer;
           background: rgba($black, 0.6);
           transition: 1s;
         }
@@ -164,31 +177,67 @@ article {
         line-height: 2rem;
         p:first-child {
           font-size: 1.3rem;
+          text-transform: uppercase;
         }
-        p:nth-child(2) {
+        h3 {
           font-size: 3rem;
         }
       }
     }
   }
-  .bottom {
+  .card-bottom {
     display: flex;
     z-index: 2;
     flex-direction: column;
     align-self: flex-end;
+    border-top: 1px solid $primary-dark;
     min-height: 20rem;
     width: 100%;
     padding: 1rem;
-    background: $primary-light;
+    background: $primary;
+    line-height: 1.5rem;
+    text-transform: capitalize;
 
+    h3 {
+      color: $secondary;
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+    h4 {
+      padding-bottom: 1rem;
+      font-size: 1.2rem;
+    }
     .link-container {
       display: flex;
-      color: $black;
+      font-size: 0.3rem;
       font-weight: 700;
       background: rgba($gray, 0.5);
       height: 5rem;
       padding: 0.4rem;
+      margin-bottom: 1rem;
       word-break: break-word;
+      p:first-child {
+        color: darken($gray, 60%);
+        text-transform: lowercase;
+        font-size: 1rem;
+      }
+    }
+    .seller-container,
+    .lot-container {
+      margin-top: 0.5rem;
+      p:first-child {
+        color: $secondary-light;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
+      h5 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 1.8rem;
+        color: $white;
+      }
     }
   }
 }
+
+// utility
