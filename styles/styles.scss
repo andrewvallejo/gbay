@@ -95,6 +95,7 @@ main {
   height: 100%;
   padding: 0.5rem 4rem 0 2.5rem;
   background-color: $primary-light;
+  flex-flow: wrap;
 
   h2 {
     margin-bottom: 1rem;
@@ -148,7 +149,7 @@ article {
           background: rgba($black, 0.6);
           cursor: pointer;
         }
-        .rating-container {
+        .rank-container {
           opacity: 0;
           transition: 1s;
         }

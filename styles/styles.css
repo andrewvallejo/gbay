@@ -112,6 +112,8 @@ main {
   height: 100%;
   padding: 0.5rem 4rem 0 2.5rem;
   background-color: #4c8c4a;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
 }
 
 main h2 {
@@ -196,7 +198,7 @@ article .card-top .overlay:hover i {
   cursor: pointer;
 }
 
-article .card-top .overlay:hover .rating-container {
+article .card-top .overlay:hover .rank-container {
   opacity: 0;
   -webkit-transition: 1s;
   transition: 1s;
